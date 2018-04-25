@@ -1,8 +1,18 @@
 package xyz.veiasai.pojo;
 
+import org.springframework.stereotype.Component;
+
 public class JWT {
     private String jwt;
-    private String id;
+    private Integer code;
+
+    public Integer getCode() {
+        return code;
+    }
+
+    public void setCode(Integer code) {
+        this.code = code;
+    }
 
     public String getJwt() {
         return jwt;
@@ -10,13 +20,5 @@ public class JWT {
 
     public void setJwt(String jwt) {
         this.jwt = jwt;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 }
