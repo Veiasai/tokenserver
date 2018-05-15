@@ -17,8 +17,13 @@ import xyz.veiasai.pojo.User;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
-@EnableAutoConfiguration
 public class Main {
+    @RequestMapping("/")
+    @ResponseBody
+    String Hello() {
+        return "Hello World";
+    }
+
     @RequestMapping("/gettoken")
     @ResponseBody
     JWT CreateToken(@RequestBody User user) {
@@ -48,9 +53,5 @@ public class Main {
             result.setCode(400);
         }
         return result;
-    }
-
-    public static void main(String[] args) throws Exception {
-        SpringApplication.run(Main.class, args);
     }
 }
